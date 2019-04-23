@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from findARestaurant import findARestaurant
 from models import Base, Restaurant
 from flask import Flask, jsonify, request
