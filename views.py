@@ -30,11 +30,15 @@ app = Flask(__name__)
 
 @app.route('/restaurants', methods = ['GET', 'POST'])
 def all_restaurants_handler():
-  #YOUR CODE HERE
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
+    #YOUR CODE HERE
     
 @app.route('/restaurants/<int:id>', methods = ['GET','PUT', 'DELETE'])
 def restaurant_handler(id):
-  #YOUR CODE HERE
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
+    #YOUR CODE HERE
 
 if __name__ == '__main__':
     app.debug = True
